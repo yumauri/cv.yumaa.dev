@@ -158,13 +158,16 @@ aside > section p {
   padding: 0 0.5em 0 14px;
 }
 
-aside > section > .icon {
+section > .icon {
   position: absolute;
   top: 16pt;
-  right: -23px;
   background-color: white;
   padding: 2px 0 4px 0;
   z-index: 1;
+}
+
+aside > section > .icon {
+  right: -23px;
 }
 
 main > section {
@@ -173,12 +176,7 @@ main > section {
 }
 
 main > section > .icon {
-  position: absolute;
-  top: 16pt;
   left: -8px;
-  background-color: white;
-  padding: 2px 0 4px 0;
-  z-index: 1;
 }
 
 main > section > p {
@@ -294,6 +292,10 @@ section.act h3::before {
   .details p svg {
     margin-left: -3px;
     margin-right: 3px;
+  }
+
+  section > .icon {
+    background-color: inherit;
   }
 
   section.details.left {
