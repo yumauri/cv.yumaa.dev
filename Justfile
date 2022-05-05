@@ -1,2 +1,2 @@
 dev:
-  devd -l .
+  devd -al .
