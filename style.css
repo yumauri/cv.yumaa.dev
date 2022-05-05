@@ -8,6 +8,8 @@ body {
   padding: 10px;
   font-family: Avenir, Arial, sans-serif;
   min-width: 300px;
+  max-width: 1024px;
+  margin: auto;
 }
 
 svg {
@@ -16,6 +18,10 @@ svg {
 
 p {
   font-size: 12pt;
+}
+
+a {
+  color: inherit;
 }
 
 h1 {
@@ -79,6 +85,10 @@ h3 span.gray {
   font-weight: normal;
   color: gray;
   font-size: 0.8em;
+}
+
+h4::after {
+  content: " ↓";
 }
 
 header {
@@ -178,6 +188,15 @@ section.job {
   padding: 0.5em;
 }
 
+section.job > ul {
+  padding-left: 1em;
+  list-style-type: "· ";
+}
+
+section.project {
+  padding: 0.5em;
+}
+
 section.languages sup {
   display: inline-block;
   width: 22px;
@@ -220,7 +239,29 @@ section.job article h3::before {
   margin-left: 0;
 }
 
+section.project h3::before {
+  width: 7px;
+  height: 2px;
+  border-bottom: 2px solid black;
+  content: "";
+  margin-left: 5px;
+  margin-right: 8px;
+}
+
+.for-notes,
+.firefox-print-warn {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
+  h4::before {
+    content: "↓ ";
+  }
+
+  h4::after {
+    content: "";
+  }
+
   .columns {
     grid-template-columns: 1fr;
   }
@@ -283,5 +324,36 @@ section.job article h3::before {
 
   section.no-padding h2 {
     padding-top: 16pt;
+  }
+}
+
+@media print {
+  .columns {
+    page-break-before: avoid;
+  }
+
+  section.job article.setplex2,
+  section.job.ispsystem,
+  section.for-notes {
+    page-break-before: always;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .for-notes {
+    display: block;
+  }
+
+  .for-notes h4 {
+    color: gray;
+  }
+
+  @-moz-document url-prefix() {
+    .firefox-print-warn {
+      display: block;
+      margin-top: 3em;
+    }
   }
 }
