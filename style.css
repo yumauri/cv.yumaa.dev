@@ -193,7 +193,8 @@ section.job > ul {
   list-style-type: "· ";
 }
 
-section.project {
+section.project,
+section.act {
   padding: 0.5em;
 }
 
@@ -239,7 +240,8 @@ section.job article h3::before {
   margin-left: 0;
 }
 
-section.project h3::before {
+section.project h3::before,
+section.act h3::before {
   width: 7px;
   height: 2px;
   border-bottom: 2px solid black;
