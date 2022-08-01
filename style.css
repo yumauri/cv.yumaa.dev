@@ -1,7 +1,9 @@
 @font-face {
   font-family: "Avenir";
-  src: local("Avenir"), url("fonts/Avenir.woff2") format("woff2"),
+  src: url("fonts/Avenir.woff2") format("woff2"),
     url("fonts/Avenir.woff") format("woff");
+  /* src: local("Avenir"), url("fonts/Avenir.woff2") format("woff2"),
+    url("fonts/Avenir.woff") format("woff"); */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -22,7 +24,7 @@ body {
 }
 
 svg {
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 p {
@@ -65,19 +67,26 @@ h3 > * {
 
 h3 img {
   filter: grayscale(1);
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 h3 img.setplex {
   opacity: 0.8;
+  margin-bottom: -3px;
+}
+
+h3 img.sber {
+  margin-bottom: -1px;
 }
 
 h3 img.zodiac {
   opacity: 0.6;
+  margin-bottom: -3px;
 }
 
 h3 img.ispsystem {
   opacity: 0.5;
+  margin-bottom: -1px;
 }
 
 h3 .dates,
@@ -85,8 +94,8 @@ h3 .at {
   margin-left: 3px;
 }
 
-h3 .at {
-  /* padding-left: 20px; */
+h3 .dates svg {
+  margin-bottom: -1px;
 }
 
 h3 span.gray {
@@ -162,7 +171,7 @@ section > .icon {
   position: absolute;
   top: 16pt;
   background-color: white;
-  padding: 2px 0 4px 0;
+  padding-top: 6px;
   z-index: 1;
 }
 
