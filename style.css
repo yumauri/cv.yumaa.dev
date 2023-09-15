@@ -225,6 +225,10 @@ section.languages svg {
   margin-left: -3px;
 }
 
+section.act svg {
+  margin-bottom: -3px;
+}
+
 article {
   padding: 1em 0 0 20px;
   position: relative;
@@ -354,8 +358,10 @@ section.act h3::before {
     page-break-before: avoid;
   }
 
-  section.job article.setplex2,
-  section.job.ispsystem,
+  /* section.job article.setplex2, */
+  /* section.job.sber, */
+  /* section.job.ispsystem, */
+  section.projects,
   section.for-notes {
     page-break-before: always;
   }
