@@ -2,8 +2,6 @@
   font-family: "Avenir";
   src: url("fonts/Avenir.woff2") format("woff2"),
     url("fonts/Avenir.woff") format("woff");
-  /* src: local("Avenir"), url("fonts/Avenir.woff2") format("woff2"),
-    url("fonts/Avenir.woff") format("woff"); */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -75,6 +73,11 @@ h3 img.setplex {
   margin-bottom: -3px;
 }
 
+h3 img.yandex-lyceum {
+  opacity: 0.8;
+  margin-bottom: -1px;
+}
+
 h3 img.sber {
   margin-bottom: -1px;
 }
@@ -129,7 +132,6 @@ header {
 
 .details {
   background-color: #eaeaea;
-  /* border-bottom: 1px solid black; */
   padding: 10px 10px 10px 0;
   margin: -7px -3px -5px 0;
 }
@@ -359,9 +361,10 @@ section.act h3::before {
   }
 
   /* section.job article.setplex2, */
+  section.job article.setplex1,
   /* section.job.sber, */
-  /* section.job.ispsystem, */
-  section.projects,
+  section.job.ispsystem,
+  /* section.projects, */
   section.for-notes {
     page-break-before: always;
   }
